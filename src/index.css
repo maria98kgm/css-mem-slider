@@ -106,3 +106,17 @@ input[type="radio"]:checked {
 #slide4:checked ~ .gop .m1, #slide4:checked ~ .pop .m2  {
   margin-left: -300%;
 }
+
+@media (max-width: 560px) {
+  .nav {
+    grid-template-areas: 'head head head head' 'foot1 foot2 foot3 foot4' 'foot foot foot foot';
+    grid-auto-columns: auto;
+  }
+  input[type="radio"] {
+    justify-self: center;
+  }
+  .gop {
+    border: 5px solid #494949;
+    width: 100%;
+  }
+}
