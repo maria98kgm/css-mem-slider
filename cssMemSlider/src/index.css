@@ -1,4 +1,5 @@
-body {
+
+/* body {
   margin: 0%;
 }
 
@@ -118,5 +119,151 @@ input[type="radio"]:checked {
   .gop {
     border: 5px solid #494949;
     width: 100%;
+  }
+} */
+
+body {
+  margin: 0%;
+}
+
+.slider-container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #292929;
+}
+
+.slider {
+  width: 65%;
+  height: 80%;
+  position: relative;
+  border-radius: 20px;
+  background: #494949;
+  padding: 20px;
+  display: grid;
+  grid-template-areas: 'image image' 'text nav';
+}
+
+input {
+  display: none;
+}
+
+.nav {
+  display: flex;
+}
+
+label {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  margin: 0px;
+  width: 15px;
+  height: 15px;
+  background-color: brown;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+#check:checked ~ .nav #check_label span{
+  background-color: aquamarine;
+}
+
+#check2:checked ~ .nav #check_label2 span{
+  background-color: aquamarine;
+}
+
+#check3:checked ~ .nav #check_label3 span{
+  background-color: aquamarine;
+}
+
+#check4:checked ~ .nav #check_label4 span{
+  background-color: aquamarine;
+}
+
+#check:active ~ .nav #check_label span{
+  background-color: blue;
+}
+
+#check2:active ~ .nav #check_label2 span{
+  background-color: blue;
+}
+
+#check3:active ~ .nav #check_label3 span{
+  background-color: blue;
+}
+
+#check4:active ~ .nav #check_label4 span{
+  background-color: blue;
+}
+
+.image {
+  grid-area: image;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.image img {
+  width: 100%;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.text {
+  grid-area: text;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  box-sizing: border-box;
+}
+
+.text p {
+  width: 100%;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+  text-align: start;
+  font-size: 20px;
+}
+
+.nav {
+  grid-area: nav;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#check:checked ~ .image .m1, #check:checked ~ .text .m2  {
+  margin-left: 0%;
+}
+
+#check2:checked ~ .image .m1, #check2:checked ~ .text .m2 {
+  margin-left: -100%;
+}
+
+#check3:checked ~ .image .m1, #check3:checked ~ .text .m2  {
+  margin-left: -200%;
+}
+
+#check4:checked ~ .image .m1, #check4:checked ~ .text .m2  {
+  margin-left: -300%;
+}
+
+@media (max-width: 560px) {
+  .slider {
+    grid-template-areas: 'image' 'nav' 'text';
+  }
+  .nav {
+    justify-content: center;
   }
 }
