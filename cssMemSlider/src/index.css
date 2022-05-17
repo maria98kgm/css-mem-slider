@@ -72,8 +72,8 @@ input {
 }
 
 label {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   display: inline-block;
   border-radius: 50%;
   cursor: pointer;
@@ -84,8 +84,8 @@ label {
 
 span {
   margin: 0px;
-  width: 15px;
-  height: 15px;
+  width: 1rem;
+  height: 1rem;
   background-color: rgb(206, 147, 255);
   display: inline-block;
   border-radius: 50%;
