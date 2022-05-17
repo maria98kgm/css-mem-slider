@@ -46,7 +46,7 @@ body {
   color: rgb(216, 168, 255);
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   box-sizing: border-box;
   font-family: 'Roboto Mono', monospace;
 }
@@ -58,12 +58,13 @@ body {
   text-align: start;
   font-size: 3vh;
   font-weight: 600;
+  margin-top: 0.5%;
 }
 
 .nav {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
   width: 20%;
 }
 
