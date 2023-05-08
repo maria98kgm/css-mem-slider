@@ -1,0 +1,176 @@
+body {
+  margin: 0%;
+}
+
+.slider-container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: rgb(107,7,43);
+  background: linear-gradient(125deg, rgba(107,7,43,1) 0%, rgba(70,4,88,1) 49%, rgba(1,0,24,1) 100%);
+}
+
+.slider {
+  width: 65%;
+  border-radius: 1rem;
+  background: #150018;
+  padding: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 1.5vw;
+}
+
+.image {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  width: 100%;
+  max-height: 65vh;
+}
+
+.image img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  transition: all 0.25s ease;
+}
+
+.text {
+  width: 80%;
+  height: 20%;
+  color: rgb(216, 168, 255);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.text p {
+  width: 100%;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+  text-align: start;
+  font-size: 3vh;
+  font-weight: 600;
+  margin-top: 0.5%;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 20%;
+}
+
+input {
+  display: none;
+}
+
+label {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  margin: 0px;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(206, 147, 255);
+  display: inline-block;
+  border-radius: 50%;
+}
+
+@media (max-width: 580px) {
+  .nav {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .text {
+    width: 100%;
+    order: 3;
+  }
+}
+
+#check:checked ~ .nav #check_label span{
+  background-color: rgb(183, 0, 255);
+}
+
+#check2:checked ~ .nav #check_label2 span{
+  background-color: rgb(183, 0, 255);
+}
+
+#check3:checked ~ .nav #check_label3 span{
+  background-color: rgb(183, 0, 255);
+}
+
+#check4:checked ~ .nav #check_label4 span{
+  background-color: rgb(183, 0, 255);
+}
+
+#check:active ~ .nav #check_label span{
+  background-color: rgb(255, 0, 106);
+}
+
+#check2:active ~ .nav #check_label2 span{
+  background-color: rgb(255, 0, 106);
+}
+
+#check3:active ~ .nav #check_label3 span{
+  background-color: rgb(255, 0, 106);
+}
+
+#check4:active ~ .nav #check_label4 span{
+  background-color: rgb(255, 0, 106);
+}
+
+#check:hover ~ .nav #check_label span{
+  box-shadow: 0px 0px 10px 6px rgb(183, 0, 255);
+  transition: all .2s ease-in-out;
+  transform: scale(1.2)
+}
+
+#check2:hover ~ .nav #check_label2 span{
+  box-shadow: 0px 0px 10px 6px rgb(183, 0, 255);
+  transition: all .2s ease-in-out;
+  transform: scale(1.2)
+}
+
+#check3:hover ~ .nav #check_label3 span{
+  box-shadow: 0px 0px 10px 6px rgb(183, 0, 255);
+  transition: all .2s ease-in-out;
+  transform: scale(1.2)
+}
+
+#check4:hover ~ .nav #check_label4 span{
+  box-shadow: 0px 0px 10px 6px rgb(183, 0, 255);
+  transition: all .2s ease-in-out;
+  transform: scale(1.2)
+}
+
+#check:checked ~ .image .m1, #check:checked ~ .text .m2  {
+  margin-left: 0%;
+}
+
+#check2:checked ~ .image .m1, #check2:checked ~ .text .m2 {
+  margin-left: -100%;
+}
+
+#check3:checked ~ .image .m1, #check3:checked ~ .text .m2  {
+  margin-left: -200%;
+}
+
+#check4:checked ~ .image .m1, #check4:checked ~ .text .m2  {
+  margin-left: -300%;
+}
